@@ -1,0 +1,917 @@
+---
+layout: default
+title: "Laboratory for Intelligent Synthetic Biology"
+---
+
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
+                        <i class="fa fa-dna text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-primary font-display font-bold text-lg md:text-xl">Intelligent Synthetic Biology</h1>
+                        <p class="text-xs text-gray-500">智能合成生物学实验室</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium hover:text-accent transition-colors duration-300">
+                        Home
+                        <span class="block text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="research.html" class="text-gray-600 font-medium hover:text-primary transition-colors duration-300">
+                        Research
+                        <span class="block text-xs text-gray-500">研究</span>
+                    </a>
+                    <a href="people.html" class="text-gray-600 font-medium hover:text-primary transition-colors duration-300">
+                        People
+                        <span class="block text-xs text-gray-500">成员</span>
+                    </a>
+                    <a href="publications.html" class="text-gray-600 font-medium hover:text-primary transition-colors duration-300">
+                        Publications
+                        <span class="block text-xs text-gray-500">论文</span>
+                    </a>
+                    <a href="join.html" class="text-gray-600 font-medium hover:text-primary transition-colors duration-300">
+                        Join Us
+                        <span class="block text-xs text-gray-500">招聘</span>
+                    </a>
+                </nav>
+                
+                <!-- Mobile Navigation Toggle -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2">
+                <nav class="flex flex-col space-y-3 py-3">
+                    <a href="index.html" class="text-primary font-medium py-2 hover:text-accent transition-colors duration-300">
+                        Home
+                        <span class="block text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="research.html" class="text-gray-600 font-medium py-2 hover:text-primary transition-colors duration-300">
+                        Research
+                        <span class="block text-xs text-gray-500">研究</span>
+                    </a>
+                    <a href="people.html" class="text-gray-600 font-medium py-2 hover:text-primary transition-colors duration-300">
+                        People
+                        <span class="block text-xs text-gray-500">成员</span>
+                    </a>
+                    <a href="publications.html" class="text-gray-600 font-medium py-2 hover:text-primary transition-colors duration-300">
+                        Publications
+                        <span class="block text-xs text-gray-500">论文</span>
+                    </a>
+                    <a href="join.html" class="text-gray-600 font-medium py-2 hover:text-primary transition-colors duration-300">
+                        Join Us
+                        <span class="block text-xs text-gray-500">招聘</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <!-- Background with overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/80 z-10"></div>
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1019/1920/1080'); filter: brightness(0.7);"></div>
+        
+        <!-- Animated DNA Helix SVG -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+                <path id="dna-path" d="M50,10 C60,15 70,25 80,30 C70,35 60,45 50,50 C40,55 30,65 20,70 C30,75 40,85 50,90" fill="none" stroke="white" stroke-width="1"/>
+                <path d="M50,10 C40,15 30,25 20,30 C30,35 40,45 50,50 C60,55 70,65 80,70 C70,75 60,85 50,90" fill="none" stroke="white" stroke-width="1"/>
+                <circle class="dna-node" cx="50" cy="10" r="2" fill="white"/>
+                <circle class="dna-node" cx="80" cy="30" r="2" fill="white"/>
+                <circle class="dna-node" cx="50" cy="50" r="2" fill="white"/>
+                <circle class="dna-node" cx="20" cy="70" r="2" fill="white"/>
+                <circle class="dna-node" cx="50" cy="90" r="2" fill="white"/>
+                <circle class="dna-node" cx="50" cy="10" r="2" fill="white"/>
+                <circle class="dna-node" cx="20" cy="30" r="2" fill="white"/>
+                <circle class="dna-node" cx="50" cy="50" r="2" fill="white"/>
+                <circle class="dna-node" cx="80" cy="70" r="2" fill="white"/>
+                <circle class="dna-node" cx="50" cy="90" r="2" fill="white"/>
+            </svg>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="container mx-auto px-4 z-20 text-center">
+            <h1 class="text-[clamp(2rem,8vw,5rem)] font-display font-bold text-white mb-6 tracking-tight text-shadow animate-fadeIn">
+                Laboratory for<br>
+                <span class="gradient-text">Intelligent Synthetic Biology</span>
+            </h1>
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-2xl mx-auto">
+                Pioneering research at the intersection of artificial intelligence and synthetic biology
+                <span class="block text-base text-white/80 mt-2">人工智能与合成生物学交叉领域的开创性研究</span>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="research.html" class="bg-white text-primary hover:bg-secondary hover:text-dark font-medium py-3 px-8 rounded-full transition-all duration-300 transform hover-lift shadow-lg">
+                    Explore Research
+                </a>
+                <a href="join.html" class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium py-3 px-8 rounded-full transition-all duration-300 transform hover-lift">
+                    Join Our Team
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#about" class="text-white/70 hover:text-white">
+                <i class="fa fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full bg-accent/20 rounded-lg -z-10"></div>
+                        <img src="https://picsum.photos/id/1011/800/600" alt="Laboratory" class="w-full h-auto rounded-lg shadow-xl hover-lift">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold text-primary mb-6">About Our Laboratory</h2>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        The Laboratory for Intelligent Synthetic Biology is dedicated to advancing the frontiers of synthetic biology through the integration of artificial intelligence and machine learning techniques.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Our multidisciplinary team combines expertise in molecular biology, computer science, and bioinformatics to develop novel approaches for designing and engineering biological systems with unprecedented precision and efficiency.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-light p-6 rounded-lg shadow-sm border border-neutral">
+                            <div class="text-primary text-4xl mb-3"><i class="fa fa-flask"></i></div>
+                            <h3 class="font-bold text-lg mb-2">Advanced Research</h3>
+                            <p class="text-gray-600 text-sm">Cutting-edge techniques in synthetic biology</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg shadow-sm border border-neutral">
+                            <div class="text-primary text-4xl mb-3"><i class="fa fa-code"></i></div>
+                            <h3 class="font-bold text-lg mb-2">AI Integration</h3>
+                            <p class="text-gray-600 text-sm">Machine learning for biological design</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg shadow-sm border border-neutral">
+                            <div class="text-primary text-4xl mb-3"><i class="fa fa-users"></i></div>
+                            <h3 class="font-bold text-lg mb-2">Collaboration</h3>
+                            <p class="text-gray-600 text-sm">Global partnerships and research networks</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg shadow-sm border border-neutral">
+                            <div class="text-primary text-4xl mb-3"><i class="fa fa-lightbulb-o"></i></div>
+                            <h3 class="font-bold text-lg mb-2">Innovation</h3>
+                            <p class="text-gray-600 text-sm">Novel applications and technologies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Highlights -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold text-primary mb-4">Research Highlights</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Our laboratory focuses on several key research areas at the intersection of synthetic biology and artificial intelligence
+                    <span class="block text-sm text-gray-500 mt-1">我们的实验室专注于合成生物学与人工智能交叉领域的几个关键研究方向</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Research Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-lift transition-all duration-300 border border-neutral/50">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/1025/600/400" alt="AI for Protein Design" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-3 text-primary">AI for Protein Design</h3>
+                        <p class="text-gray-600 mb-4">
+                            Developing machine learning algorithms to predict and design protein structures with specific functions for biotechnology applications.
+                        </p>
+                        <p class="text-xs text-gray-500 italic mb-4">蛋白质设计的人工智能方法</p>
+                        <a href="research.html" class="text-accent font-medium hover:text-primary transition-colors flex items-center gap-2">
+                            Learn more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Research Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-lift transition-all duration-300 border border-neutral/50">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/1018/600/400" alt="Synthetic Gene Circuits" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-3 text-primary">Synthetic Gene Circuits</h3>
+                        <p class="text-gray-600 mb-4">
+                            Engineering complex genetic circuits that can sense, process information, and respond to environmental stimuli in living cells.
+                        </p>
+                        <p class="text-xs text-gray-500 italic mb-4">合成基因电路</p>
+                        <a href="research.html" class="text-accent font-medium hover:text-primary transition-colors flex items-center gap-2">
+                            Learn more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Research Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-lift transition-all duration-300 border border-neutral/50">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/1002/600/400" alt="Microbiome Engineering" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl mb-3 text-primary">Microbiome Engineering</h3>
+                        <p class="text-gray-600 mb-4">
+                            Harnessing and engineering microbial communities for applications in medicine, agriculture, and environmental sustainability.
+                        </p>
+                        <p class="text-xs text-gray-500 italic mb-4">微生物组工程</p>
+                        <a href="research.html" class="text-accent font-medium hover:text-primary transition-colors flex items-center gap-2">
+                            Learn more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Publications -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                <div>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold text-primary mb-4">Recent Publications</h2>
+                    <p class="text-gray-600">
+                        Our laboratory's latest research findings in peer-reviewed journals
+                        <span class="block text-sm text-gray-500 mt-1">我们实验室在同行评审期刊上的最新研究成果</span>
+                    </p>
+                </div>
+                <a href="publications.html" class="mt-4 md:mt-0 px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow hover-lift">
+                    View All Publications
+                </a>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Publication 1 -->
+                <div class="flex flex-col md:flex-row gap-6 items-start border-b border-neutral pb-8">
+                    <div class="md:w-1/6 flex-shrink-0">
+                        <div class="bg-primary/10 rounded-full h-16 w-16 flex items-center justify-center text-primary">
+                            <i class="fa fa-file-text-o text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-5/6">
+                        <h3 class="font-bold text-lg mb-2 text-primary">Deep Learning for Predicting CRISPR-Cas9 Off-Target Effects</h3>
+                        <p class="text-gray-600 mb-3">
+                            Zhang L, Wang Y, Chen J, et al. (2023). Development of a novel deep learning approach to accurately predict CRISPR-Cas9 off-target effects, improving the safety of genome editing technologies.
+                        </p>
+                        <div class="flex flex-wrap gap-3 text-sm text-gray-500">
+                            <span class="bg-light px-3 py-1 rounded-full">Nature Machine Intelligence</span>
+                            <span class="bg-light px-3 py-1 rounded-full">2023</span>
+                            <span class="bg-light px-3 py-1 rounded-full">DOI: 10.1038/s42256-023-00654-x</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publication 2 -->
+                <div class="flex flex-col md:flex-row gap-6 items-start border-b border-neutral pb-8">
+                    <div class="md:w-1/6 flex-shrink-0">
+                        <div class="bg-primary/10 rounded-full h-16 w-16 flex items-center justify-center text-primary">
+                            <i class="fa fa-file-text-o text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-5/6">
+                        <h3 class="font-bold text-lg mb-2 text-primary">AI-Guided Design of Synthetic Gene Circuits with Desired Dynamics</h3>
+                        <p class="text-gray-600 mb-3">
+                            Li H, Liu Z, Wang M, et al. (2023). Implementation of a reinforcement learning approach for the automated design of synthetic gene circuits with specific temporal behaviors.
+                        </p>
+                        <div class="flex flex-wrap gap-3 text-sm text-gray-500">
+                            <span class="bg-light px-3 py-1 rounded-full">Science Advances</span>
+                            <span class="bg-light px-3 py-1 rounded-full">2023</span>
+                            <span class="bg-light px-3 py-1 rounded-full">DOI: 10.1126/sciadv.adg0451</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Publication 3 -->
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="md:w-1/6 flex-shrink-0">
+                        <div class="bg-primary/10 rounded-full h-16 w-16 flex items-center justify-center text-primary">
+                            <i class="fa fa-file-text-o text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-5/6">
+                        <h3 class="font-bold text-lg mb-2 text-primary">Multimodal Integration of Omics Data for Microbial Community Analysis</h3>
+                        <p class="text-gray-600 mb-3">
+                            Wang J, Chen X, Zhang Y, et al. (2022). Development of a novel computational framework for integrating metagenomic, metatranscriptomic, and metabolomic data to understand microbial community functions.
+                        </p>
+                        <div class="flex flex-wrap gap-3 text-sm text-gray-500">
+                            <span class="bg-light px-3 py-1 rounded-full">Cell Systems</span>
+                            <span class="bg-light px-3 py-1 rounded-full">2022</span>
+                            <span class="bg-light px-3 py-1 rounded-full">DOI: 10.1016/j.cels.2022.09.005</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Impact -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold mb-4">Research Impact</h2>
+                <p class="text-white/80 max-w-3xl mx-auto">
+                    Our contributions to the fields of synthetic biology and artificial intelligence
+                    <span class="block text-sm text-white/70 mt-1">我们对合成生物学和人工智能领域的贡献</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2"><span class="counter" data-target="85">0</span>+</div>
+                    <p class="text-white/80">Peer-Reviewed Publications</p>
+                    <p class="text-xs text-white/70">同行评审论文</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2"><span class="counter" data-target="12">0</span></div>
+                    <p class="text-white/80">Patents Filed</p>
+                    <p class="text-xs text-white/70">已申请专利</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2"><span class="counter" data-target="5">0</span>M+</div>
+                    <p class="text-white/80">Research Funding</p>
+                    <p class="text-xs text-white/70">研究资金</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl font-bold mb-2"><span class="counter" data-target="35">0</span></div>
+                    <p class="text-white/80">Research Collaborations</p>
+                    <p class="text-xs text-white/70">研究合作</p>
+                </div>
+            </div>
+            
+            <!-- Research Impact Chart -->
+            <div class="mt-20 bg-white/10 backdrop-blur-sm p-8 rounded-xl">
+                <h3 class="text-2xl font-display font-bold mb-6 text-center">Research Output by Year</h3>
+                <div class="h-80">
+                    <canvas id="researchChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Spotlight -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold text-primary mb-4">Our Team</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Meet the talented researchers and staff members of our laboratory
+                    <span class="block text-sm text-gray-500 mt-1">认识我们实验室才华横溢的研究人员和工作人员</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-lift transition-all duration-300 text-center">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://picsum.photos/id/1012/400/400" alt="Dr. Jane Smith" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-primary">Dr. Jane Smith</h3>
+                        <p class="text-sm text-gray-500 mb-3">Principal Investigator</p>
+                        <p class="text-xs text-gray-500 italic mb-4">首席研究员</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Expert in synthetic biology and computational biology with over 15 years of research experience.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-envelope"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-google"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-lift transition-all duration-300 text-center">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://picsum.photos/id/1005/400/400" alt="Dr. Michael Johnson" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-primary">Dr. Michael Johnson</h3>
+                        <p class="text-sm text-gray-500 mb-3">Senior Research Scientist</p>
+                        <p class="text-xs text-gray-500 italic mb-4">高级研究科学家</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Specialist in machine learning applications for protein structure prediction and design.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-envelope"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-lift transition-all duration-300 text-center">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://picsum.photos/id/1027/400/400" alt="Dr. Sarah Chen" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-primary">Dr. Sarah Chen</h3>
+                        <p class="text-sm text-gray-500 mb-3">Postdoctoral Researcher</p>
+                        <p class="text-xs text-gray-500 italic mb-4">博士后研究员</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Focused on developing synthetic gene circuits for sensing and responding to environmental signals.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-envelope"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-google"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-lift transition-all duration-300 text-center">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://picsum.photos/id/1074/400/400" alt="Dr. David Kim" class="w-full h-full object-cover object-center">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1 text-primary">Dr. David Kim</h3>
+                        <p class="text-sm text-gray-500 mb-3">Bioinformatics Specialist</p>
+                        <p class="text-xs text-gray-500 italic mb-4">生物信息学专家</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Expert in developing computational methods for analyzing large-scale biological datasets.
+                        </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-envelope"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-primary transition-colors"><i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="people.html" class="inline-block px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow hover-lift">
+                    View Full Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Events -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold text-primary mb-4">News & Events</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Latest updates and upcoming events from our laboratory
+                    <span class="block text-sm text-gray-500 mt-1">我们实验室的最新动态和即将举行的活动</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News Item 1 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-sm hover-lift transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/1047/600/400" alt="New Research Grant" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-3">June 15, 2023</div>
+                        <h3 class="font-bold text-lg mb-3 text-primary">Lab Awarded Major Research Grant</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our laboratory has been awarded a $2.5 million research grant from the National Science Foundation to develop AI-powered tools for synthetic biology.
+                        </p>
+                        <a href="#" class="text-accent font-medium hover:text-primary transition-colors flex items-center gap-2">
+                            Read more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- News Item 2 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-sm hover-lift transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/1070/600/400" alt="Conference Presentation" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-3">May 22, 2023</div>
+                        <h3 class="font-bold text-lg mb-3 text-primary">Presenting at International Conference</h3>
+                        <p class="text-gray-600 mb-4">
+                            Dr. Smith and members of the team will present our latest research at the International Conference on Synthetic Biology in San Francisco.
+                        </p>
+                        <a href="#" class="text-accent font-medium hover:text-primary transition-colors flex items-center gap-2">
+                            Read more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- News Item 3 -->
+                <div class="bg-light rounded-lg overflow-hidden shadow-sm hover-lift transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/1066/600/400" alt="New Lab Equipment" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-3">April 8, 2023</div>
+                        <h3 class="font-bold text-lg mb-3 text-primary">New High-Throughput Sequencing Equipment</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our laboratory has acquired state-of-the-art high-throughput sequencing equipment to advance our genomics research capabilities.
+                        </p>
+                        <a href="#" class="text-accent font-medium hover:text-primary transition-colors flex items-center gap-2">
+                            Read more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us -->
+    <section class="py-20 bg-gradient-to-r from-primary to-accent text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold mb-6">Join Our Research Team</h2>
+                <p class="text-white/80 mb-8 text-lg">
+                    We are looking for talented and motivated researchers to join our laboratory
+                    <span class="block text-base text-white/70 mt-2">我们正在寻找才华横溢、积极进取的研究人员加入我们的实验室</span>
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg hover-lift">
+                        <h3 class="font-bold text-xl mb-3">Postdoctoral Positions</h3>
+                        <p class="text-white/80 mb-4">
+                            We have openings for postdoctoral researchers with backgrounds in synthetic biology, computational biology, or machine learning.
+                        </p>
+                        <a href="join.html" class="text-white font-medium hover:text-secondary transition-colors inline-flex items-center gap-2">
+                            Learn more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg hover-lift">
+                        <h3 class="font-bold text-xl mb-3">Graduate Students</h3>
+                        <p class="text-white/80 mb-4">
+                            We welcome applications from prospective graduate students interested in pursuing research in intelligent synthetic biology.
+                        </p>
+                        <a href="join.html" class="text-white font-medium hover:text-secondary transition-colors inline-flex items-center gap-2">
+                            Learn more <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <a href="join.html" class="inline-block px-8 py-4 bg-white text-primary rounded-full hover:bg-secondary hover:text-dark font-bold text-lg transition-all duration-300 transform hover-lift shadow-lg">
+                    View All Openings
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-display font-bold text-primary mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Get in touch with our laboratory for collaborations, questions, or more information
+                    <span class="block text-sm text-gray-500 mt-1">与我们的实验室联系以进行合作、咨询或获取更多信息</span>
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="font-display font-bold text-xl mb-6 text-primary">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-neutral rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-neutral rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-neutral rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-neutral rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors shadow hover-lift">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="font-display font-bold text-xl mb-6 text-primary">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="text-primary text-2xl mt-1"><i class="fa fa-map-marker"></i></div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Address</h4>
+                                    <p class="text-gray-600">
+                                        Institute of Biological Sciences<br>
+                                        123 University Avenue<br>
+                                        Science Park<br>
+                                        City, Country 12345
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="text-primary text-2xl mt-1"><i class="fa fa-envelope"></i></div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600">contact@isblab.edu</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="text-primary text-2xl mt-1"><i class="fa fa-phone"></i></div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="text-primary text-2xl mt-1"><i class="fa fa-clock-o"></i></div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Working Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="h-10 w-10 rounded-full bg-white flex items-center justify-center">
+                            <i class="fa fa-dna text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-display font-bold text-lg">Intelligent Synthetic Biology</h3>
+                            <p class="text-xs text-gray-400">智能合成生物学实验室</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Advancing the frontiers of synthetic biology through the integration of artificial intelligence and machine learning techniques.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa fa-github"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home / 首页</a></li>
+                        <li><a href="research.html" class="text-gray-400 hover:text-white transition-colors">Research / 研究</a></li>
+                        <li><a href="people.html" class="text-gray-400 hover:text-white transition-colors">People / 成员</a></li>
+                        <li><a href="publications.html" class="text-gray-400 hover:text-white transition-colors">Publications / 论文</a></li>
+                        <li><a href="join.html" class="text-gray-400 hover:text-white transition-colors">Join Us / 招聘</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact / 联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Research Areas</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">AI for Protein Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Synthetic Gene Circuits</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Microbiome Engineering</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Computational Biology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Bioinformatics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter to receive updates on our research and events.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-dark">
+                            <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-primary/90 transition-colors">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <p class="text-xs text-gray-500">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        &copy; 2023 Laboratory for Intelligent Synthetic Biology. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm transition-colors">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+            
+            // Shrink Header on Scroll
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    let count = 0;
+                    const speed = 200; // Lower is faster
+                    
+                    const updateCount = () => {
+                        const increment = target / speed;
+                        if (count < target) {
+                            count += increment;
+                            counter.innerText = Math.ceil(count);
+                            setTimeout(updateCount, 1);
+                        } else {
+                            counter.innerText = target + (counter.innerText.includes('+') ? '+' : '');
+                        }
+                    };
+                    
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, observerOptions);
+        
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+        
+        // Research Impact Chart
+        const ctx = document.getElementById('researchChart').getContext('2d');
+        const researchChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
+                datasets: [{
+                    label: 'Publications',
+                    data: [5, 8, 12, 18, 25, 28],
+                    borderColor: '#ffffff',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }, {
+                    label: 'Citations',
+                    data: [25, 60, 150, 320, 650, 980],
+                    borderColor: '#f4d03f',
+                    backgroundColor: 'rgba(244, 208, 63, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#ffffff'
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        titleColor: '#1a5276',
+                        bodyColor: '#1a5276',
+                        borderColor: '#1a5276',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: true
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#ffffff'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#ffffff'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
