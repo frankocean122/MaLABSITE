@@ -1,18 +1,23 @@
 <!doctype html>
 <html lang="zh">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{{ page.title | default: site.title }}</title>
-<link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
+  <!-- 可选：favicon（如果你有） -->
+  <link rel="icon" href="{{ 'assets/img/favicon.ico' | relative_url }}">
 </head>
 <body>
-{% include header.html %}
-<main>
-{{ content }}
-</main>
-{% include footer.html %}
-<!-- scripts -->
-<script src="{{ 'assets/js/main.js' | relative_url }}"></script>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+
+  <!-- 先加载第三方库（Chart.js），再加载你自己的 main.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" integrity="" crossorigin="anonymous"></script>
+
+  <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
